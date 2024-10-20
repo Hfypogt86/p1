@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع شات أونلاين</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hidden { display: none; }
+        #chat { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
+    </style>
+</head>
+<body>
+    <h1>مرحبًا في موقع الشات!</h1>
+    
+    <div id="loginSection">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <button onclick="login()">تسجيل الدخول</button>
+    </div>
+
+    <div id="signupSection" class="hidden">
+        <h2>إنشاء حساب</h2>
+        <input type="text" id="newUsername" placeholder="اسم المستخدم الجديد" required>
+        <button onclick="signup()">إنشاء حساب</button>
+    </div>
+
+    <div id="chatSection" class="hidden">
+        <h2>الدردشة</h2>
+        <div id="chat"></div>
+        <input type="text" id="message" placeholder="اكتب رسالة">
+        <button onclick="sendMessage()">إرسال</button>
+        <button onclick="createGroup()">إنشاء مجموعة جديدة</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
